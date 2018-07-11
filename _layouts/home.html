@@ -1,0 +1,45 @@
+---
+layout: default
+title: Home
+---
+
+<section class="intro hero is-medium is-warning is-bold">
+    <div class="hero-body">
+        <div class="container">
+        <h1 class="title">Under Construction</h1>
+        <h2 class="subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Adipisci iure perferendis quo maxime tempora rerum debitis repudiandae. Laborum eligendi, 
+            aperiam nisi molestiae tempore excepturi, nostrum tenetur adipisci est a repudiandae.
+        </h2>
+        </div>
+    </div>
+</section>
+
+<div class="container projects">
+    <h2 class="is-size-3 has-text-black-bis has-text-centered is-uppercase">Projects</h2>
+    <p class="has-text-centered is-size-5">Here are some projects I am currently working on.</p>
+    <br>
+    <div class="columns">
+        {% for project in site.data.projects limit:3 %}
+        <div class="column">
+            <div class="card">
+                <header class="card-header project-header has-background-primary is-size-5">
+                    <p class="card-header-title has-text-white">
+                    {{ project.name }}
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                    {{ project.description }}
+                    </div>
+                </div>
+                <footer class="card-footer has-background-primary">
+                    <a href="{{ project.github_url }}" class="card-footer-item has-text-white">Github</a>
+                </footer>
+           </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+

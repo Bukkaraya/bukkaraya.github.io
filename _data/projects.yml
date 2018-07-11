@@ -1,0 +1,27 @@
+- name: Biblio
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  github_url: https://github.com/Bukkaraya/Biblio
+
+- name: Ken
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  github_url: https://github.com/Bukkaraya/Ken
+
+- name: Roshi
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  github_url: https://github.com/Bukkaraya/Roshi
+
+- name: Chronosal
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  github_url: https://github.com/Bukkaraya/Chronosal
+
+- name: AI Learning
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  github_url: https://github.com/Bukkaraya/AI-Learning-Goals
+
+- name: Tic Tac Toe Player
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  github_url: https://github.com/Bukkaraya/TicTacToe
+
+- name: Image Classifier
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  github_url: https://github.com/Bukkaraya/ImageClassifier
