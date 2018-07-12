@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/buefy/lib/buefy.min.css">
+   <link rel="stylesheet" href="css/style.css">
     <title> {{layout.title}} </title>
 </head>
 <body>
     {% include header.html %}
     {{ content }}
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/buefy"></script>
+    {% include footer.html %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
