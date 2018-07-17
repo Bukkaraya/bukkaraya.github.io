@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<section class="intro hero is-medium is-warning is-bold">
+<section class="intro hero is-medium is-dark is-bold">
     <div class="hero-body">
         <div class="container">
         <h1 class="title">Under Construction</h1>
@@ -16,17 +16,20 @@ title: Home
     </div>
 </section>
 
-<div class="container projects">
+<div class="container projects" id="projects">
     <h2 class="is-size-3 has-text-black-bis has-text-centered is-uppercase">Projects</h2>
-    <p class="has-text-centered is-size-5">Here are some projects I am currently working on.</p>
+    <p class="has-text-centered is-size-5">Here are all the projects that I am working on</p>
     <br>
+    {% assign num_rows =  site.projects.size | divided_by: 3.0 | ceil %}
+    {% assign start_num = 0 %}
+    {% for row in (1..num_rows) %}
     <div class="columns">
-        {% for project in site.data.projects limit:3 %}
-        <div class="column">
-            <div class="card">
+        {% for project in site.projects limit:3 offset: start_num %}
+        <div class="column project-col is-one-third">
+            <div class="card project-card">
                 <header class="card-header project-header has-background-primary is-size-5">
                     <p class="card-header-title has-text-white">
-                    {{ project.name }}
+                    {{ project.title }}
                     </p>
                 </header>
                 <div class="card-content">
@@ -35,11 +38,30 @@ title: Home
                     </div>
                 </div>
                 <footer class="card-footer has-background-primary">
+                    <a class="card-footer-item has-text-white show-project">View More</a>
                     <a href="{{ project.github_url }}" class="card-footer-item has-text-white">Github</a>
                 </footer>
            </div>
+           <div class="modal project-modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head has-background-primary">
+                    <p class="modal-card-title has-text-white">{{ project.title }}</p>
+                    <button class="modal-close is-large" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        {{ project | markdownify }}
+                    </section>
+                </div>
+            </div>
         </div>
         {% endfor %}
     </div>
+    {% assign start_num = start_num | plus: 3 %}
+    {% endfor %}
 </div>
+
+
+
+      
 

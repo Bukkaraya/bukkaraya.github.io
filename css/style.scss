@@ -3,4 +3,29 @@
 
 .projects{
     margin: 2em auto;
+    .project-card{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .card-header-title{
+            font-size: 1.10em;
+            font-weight: normal;
+        }
+    }
 }
+
+
+.project-modal{
+    h1{
+        font-size: 1.75em;
+        font-weight: bold;
+    }
+    
+    h2{
+        font-size: 1.25em;
+    }
+
+}
+
