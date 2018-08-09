@@ -1,5 +1,6 @@
 ---
 title: AI Learning
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+description: "These are a couple of learning goals I would like to achieve 
+in the field of artificial intelligence."
 github_url: https://github.com/Bukkaraya/AI-Learning-Goals
 ---
